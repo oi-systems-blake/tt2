@@ -1,0 +1,35 @@
+type Timesheet @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  Clock_in: AWSTime
+  Clock_out: AWSTime
+  Date: AWSDate
+  employeesID: ID! @index(name: "byEmployees")
+}
+
+type Travelers @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  Display_Name: String
+  Status: String
+  Fab_Crew: String
+  Projects: Projects @hasOne
+}
+
+type Projects @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  Status: String
+  Display_name: String
+  Employees: [Employees] @manyToMany(relationName: "ProjectsEmployees")
+}
+
+type Employees @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  First_Name: String
+  Last_Name: String
+  Employee_ID: Int
+  projectss: [Projects] @manyToMany(relationName: "ProjectsEmployees")
+  Status: String
+  Fab_Crew: String
+  Normal_Start_Time: String
+  Timesheets: [Timesheet] @hasMany(indexName: "byEmployees", fields: ["id"])
+}
+ 

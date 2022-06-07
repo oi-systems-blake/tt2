@@ -1,0 +1,104 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-tt1-staging-231924-authRole",
+      "UnauthRoleArn": "arn:aws:iam::162044473277:role/amplify-tt1-staging-231924-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::162044473277:role/amplify-tt1-staging-231924-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-tt1-staging-231924-deployment",
+      "UnauthRoleName": "amplify-tt1-staging-231924-unauthRole",
+      "StackName": "amplify-tt1-staging-231924",
+      "StackId": "arn:aws:cloudformation:us-east-1:162044473277:stack/amplify-tt1-staging-231924/46e01ce0-e201-11ec-ae10-0eaf41dd04e1",
+      "AmplifyAppId": "daka946hv7ka6"
+    }
+  },
+  "api": {
+    "TT1": {
+      "service": "AppSync",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "output": {
+        "authConfig": {
+          "defaultAuthentication": {
+            "authenticationType": "API_KEY",
+            "apiKeyConfig": {
+              "apiKeyExpirationDays": 30,
+              "description": "api key description"
+            }
+          },
+          "additionalAuthenticationProviders": [
+            {
+              "authenticationType": "AWS_IAM"
+            }
+          ]
+        },
+        "GraphQLAPIIdOutput": "4a5fnhr2dzfj3ahnzitmx2zzue",
+        "GraphQLAPIEndpointOutput": "https://xfaok5amvzhy3g2mwjzpuvg33a.appsync-api.us-east-1.amazonaws.com/graphql",
+        "GraphQLAPIKeyOutput": "da2-u5vyvpnidjga5iyqaqczdm54p4"
+      },
+      "lastPushTimeStamp": "2022-06-06T15:02:48.342Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-tt1-staging-231924-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+        "logicalId": "apiTT1"
+      }
+    }
+  },
+  "auth": {
+    "TT1": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false,
+      "frontendAuthConfig": {
+        "socialProviders": [],
+        "usernameAttributes": [
+          "EMAIL"
+        ],
+        "signupAttributes": [],
+        "passwordProtectionSettings": {
+          "passwordPolicyMinLength": 8,
+          "passwordPolicyCharacters": [
+            "REQUIRES_LOWERCASE",
+            "REQUIRES_NUMBERS",
+            "REQUIRES_SYMBOLS",
+            "REQUIRES_UPPERCASE"
+          ]
+        },
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "output": {
+        "UserPoolId": "us-east-1_tqi9POfxs",
+        "AppClientIDWeb": "7pitlbtlvvubhmeuuojht11kae",
+        "AppClientID": "7nc2k5knhd10pfduoecidvj8hg",
+        "IdentityPoolId": "us-east-1:d7180ee1-3dd4-46d8-81d2-870627a989d4",
+        "UserPoolArn": "arn:aws:cognito-idp:us-east-1:162044473277:userpool/us-east-1_tqi9POfxs",
+        "IdentityPoolName": "testAuthIdentityPool__staging",
+        "UserPoolName": "TT1"
+      },
+      "lastPushTimeStamp": "2022-06-06T15:02:48.344Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-tt1-staging-231924-deployment/amplify-cfn-templates/auth/TT1-cloudformation-template.json",
+        "logicalId": "authTT1"
+      }
+    }
+  },
+  "storage": {
+    "tt193c37743": {
+      "service": "S3",
+      "serviceType": "imported",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "output": {
+        "BucketName": "amplify-tt1-staging-231924-deployment",
+        "Region": "us-east-1"
+      },
+      "lastPushTimeStamp": "2022-06-06T15:02:52.658Z"
+    }
+  }
+}
