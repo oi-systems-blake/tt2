@@ -1,27 +1,27 @@
-
+import { DataStore } from 'aws-amplify'
 import './App.css';
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import { BrowserRouter as Router, Route } from 'react-router-dom'
-import './style.css'
-import Desktop131642809 from './views/desktop131642809'
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+import { Employees, Timesheet } from './models'
+import {UseEffect, UseState} from 'react'
+import { Frame1 } from "./ui-components";
 
 
-const App = () => {
+<Frame1 />
+
+function App() {
+
+  
   return (
-    <Router>
-      <div>
-        <Route exact component={Desktop131642809} path="/" />
-      </div>
-    </Router>
-  )
+    <div
+      style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: '100vh',
+      }}
+    >
+      <h2><Frame1 /></h2>
+    </div>
+  );
 }
+
+export default App;

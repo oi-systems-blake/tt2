@@ -36,7 +36,7 @@
         "GraphQLAPIEndpointOutput": "https://xfaok5amvzhy3g2mwjzpuvg33a.appsync-api.us-east-1.amazonaws.com/graphql",
         "GraphQLAPIKeyOutput": "da2-u5vyvpnidjga5iyqaqczdm54p4"
       },
-      "lastPushTimeStamp": "2022-06-06T17:28:10.612Z",
+      "lastPushTimeStamp": "2022-06-08T14:49:16.580Z",
       "providerMetadata": {
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-tt1-staging-231924-deployment/amplify-cfn-templates/api/cloudformation-template.json",
         "logicalId": "apiTT1"
@@ -81,7 +81,7 @@
         "IdentityPoolName": "testAuthIdentityPool__staging",
         "UserPoolName": "TT1"
       },
-      "lastPushTimeStamp": "2022-06-06T17:28:10.616Z",
+      "lastPushTimeStamp": "2022-06-08T14:49:16.585Z",
       "providerMetadata": {
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-tt1-staging-231924-deployment/amplify-cfn-templates/auth/TT1-cloudformation-template.json",
         "logicalId": "authTT1"

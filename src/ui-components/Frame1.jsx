@@ -31,7 +31,7 @@ export default function Frame1(props) {
         alignItems="center"
         shrink="0"
         position="relative"
-        padding="0px 0px 0px 0px"
+        padding="20px 20px 20px 20px"
         level="1"
         children="Time Tracker"
         {...getOverrideProps(overrides, "Heading")}

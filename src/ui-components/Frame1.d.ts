@@ -10,8 +10,8 @@ import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
 import { FlexProps } from "@aws-amplify/ui-react";
 import { SyntheticEvent } from "react";
 export declare type Frame1Props = React.PropsWithChildren<Partial<FlexProps> & {
-    idinput?: (event: SyntheticEvent) => void;
-    employees?: Employees;
+    idinput?: Employees;
+    employees?: (event: SyntheticEvent) => void;
 } & {
     overrides?: EscapeHatchProps | undefined | null;
 }>;
